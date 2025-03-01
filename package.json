@@ -1,6 +1,6 @@
 {
   "homepage": "https://aditinni.github.io/storyboard",
-  "name": "mystoryboard",
+  "name": "storyboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
