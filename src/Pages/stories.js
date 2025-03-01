@@ -31,6 +31,14 @@ const stories = [
       "genre": "Wholesome, Family",
       "thumbnail": "image5.webp",
       "pdf" : "s4.pdf"
+    },
+    {
+      "storyname":"I never lost her",
+      "description":"My first story which I wrote. Nothing more to disclose 😉",
+      "author":"Aditya Raj",
+      "genre":"Romance, tradegy",
+      "thumbnail":"image6.webp",
+      "pdf":"I never lost her.pdf"
     }
   ]
   export default stories;
