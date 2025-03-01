@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-links">
         <ul>
-          <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
+          <li><NavLink to="/storyboard/about" activeClassName="active">About</NavLink></li>
          
         </ul>
       </div>
       <div className="footer-info">
-        <p style={{color:"white"}}>&copy; 2025 Aditya Raj-Trying to write, to explore. All rights reserved.</p>
+        <p style={{color:"white"}}>&copy; 2025 Aditya Raj-Trying to write, to explore. All rights reserved."</p>
       </div>
     </footer>
   );
