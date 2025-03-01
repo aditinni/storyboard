@@ -7,10 +7,10 @@ import { About } from './Pages/About';
 
 function App() {
   const router = createBrowserRouter([{
-    path:"/",
+    path:"/storyboard",
     element: <CommonLayout/>,
     children:[{
-      path:"/",
+      path:"/storyboard",
       element:<Home/>
     },
     {
