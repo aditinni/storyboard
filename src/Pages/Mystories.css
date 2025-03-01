@@ -106,15 +106,15 @@
 .pdf-container .close-btn:hover {
   background: darkred;
 }
-
 /* Comments Section */
 .comments-section {
   margin-top: 40px;
   background: #f9f9f9;
-  padding: 20px;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 800px;
+  width: 100%;
+  max-width: 700px; /* Optional: Keeps it centered */
   margin: auto;
 }
 
@@ -129,14 +129,56 @@
   padding: 0;
 }
 
+/* Comment Item */
 .comments-section ul li {
   margin-bottom: 10px;
   background: #ffffff;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Handles responsiveness */
+  gap: 10px;
 }
 
+/* Comment Text */
+.comments-section ul li p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap; /* Allows text wrapping */
+  word-break: break-word;
+}
+
+/* Icons Wrapper */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Edit & Delete Icons */
+.comments-section .edit-symbol,
+.comments-section .delete-symbol {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.comments-section .edit-symbol:hover {
+  transform: scale(1.1);
+  color: #007bff;
+}
+
+.comments-section .delete-symbol:hover {
+  transform: scale(1.1);
+  color: #dc3545;
+}
+
+/* Comment Form */
 .comments-section .comment-form {
   display: flex;
   flex-direction: column;
@@ -167,26 +209,33 @@
 .comments-section .comment-form button:hover {
   background-color: #0056b3;
 }
-.comments-section ul li p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
 
-.comments-section .edit-symbol,
-.comments-section .delete-symbol {
-  margin-left: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
+/* ✅ Responsive Styles */
+@media (max-width: 600px) {
+  .comments-section {
+    width: 95%;
+    padding: 20px;
+  }
 
-.comments-section .edit-symbol:hover {
-  color: #007bff;
-}
+  .comments-section ul li {
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: flex-start; /* Aligns text and icons properly */
+  }
 
-.comments-section .delete-symbol:hover {
-  color: red;
+  .comments-section ul li p {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .comment-actions {
+    width: 100%;
+    justify-content: flex-end; /* Aligns icons to the right */
+  }
+
+  .comments-section .edit-symbol,
+  .comments-section .delete-symbol {
+    font-size: 1rem; /* Slightly smaller icons on smaller screens */
+  }
 }
 
 
@@ -206,9 +255,7 @@
     height: 85%;
   }
 
-  .comments-section {
-    width: 90%;
-  }
+ 
 }
 
 @media (max-width: 768px) {
@@ -221,9 +268,7 @@
     height: 90%;
   }
 
-  .comments-section {
-    width: 95%;
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -242,7 +287,5 @@
     height: 95%;
   }
 
-  .comments-section {
-    width: 95%;
-  }
+  
 }
