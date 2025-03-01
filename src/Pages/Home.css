@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F4F7FB;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero Heading */
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #5F8DFF; /* Soft Blue for Title */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start from below */
+    animation: fadeInUp 1.2s forwards 0.5s; /* Animation with delay */
+  }
+  
+  /* Hero Paragraph */
+  .hero p {
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start from below */
+    animation: fadeInUp 1.2s forwards 1s; /* Animation with delay */
+  }
+  
+  /* CTA Button */
+  .cta-btn {
+    background-color: #F1C40F; /* Soft Yellow-Green */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cta-btn:hover {
+    background-color: #D4AC0D; /* Slightly darker yellow-green */
+    transform: translateY(-3px); /* Subtle hover effect */
+  }
+  
+  /* Hero Section Hover Effect */
+  .hero:hover {
+    background-color: #e0e7f2; /* Slightly darker background on hover */
+  }
+  
+  /* Fade In Up Animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .cta-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  

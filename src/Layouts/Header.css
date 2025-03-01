@@ -1,0 +1,86 @@
+/* Basic reset and styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;  /* Professional sans-serif font */
+  background-color: #f7f7f7; /* Light gray background for the body */
+  color: #333; /* Dark text for better readability */
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #4e6e94, #2a4d6d); /* Professional blue gradient */
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.logo h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin-right: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #f1f1f1; /* Light gray color for links */
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 5px 0;
+  transition: color 0.3s, border-bottom 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Styling for active links */
+.nav .active {
+  color: #ff6f61; /* Soft coral color for active links */
+  border-bottom: 3px solid #ff6f61; /* Underline for active links */
+}
+
+/* Hover effect for links */
+.nav a:hover {
+  color: #ff6f61; /* Coral color on hover */
+  border-bottom: 3px solid #ff6f61; /* Underline effect on hover */
+}
+
+/* Responsive Design for mobile view */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav li {
+    margin-bottom: 12px;
+  }
+}
