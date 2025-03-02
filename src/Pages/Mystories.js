@@ -77,10 +77,13 @@ const Mystories = () => {
           />
         </div>
       )}
+    
 
       {/* Comments Section */}
+     
       <div className="comments-section">
-        <h3>Comments</h3>
+      <h1>Drop your comments</h1>
+       
         <ul>
           {comments.map((comment, idx) => (
             <li key={idx}>

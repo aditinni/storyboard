@@ -13,7 +13,7 @@ export const About = () => {
           I love solving problems, learning new skills, and building impactful projects.
         </p>
         <p>
-          Beyond coding, I enjoy diving into **stories across genres, both in Hindi and English.
+          Beyond coding, I enjoy diving into stories across genres, both in Hindi and English.
         </p>
         <p>
           Whenever inspiration strikes, I turn my thoughts into stories. My writing blends real experiences with fiction, creating meaningful narratives.
