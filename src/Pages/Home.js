@@ -11,7 +11,7 @@ export const Home=()=>{
               <h1>Welcome to My Literary World</h1>
               <p className="hero-subtitle">Discover captivating stories that inspire, challenge, and entertain</p>
               <p className="hero-description">Explore carefully crafted narratives by Aditya Raj—a storyteller dedicated to creating immersive experiences through the art of writing.</p>
-              <NavLink to="/storyboard/my-stories" className="cta-btn">Explore Stories</NavLink>
+              <NavLink to="/my-stories" className="cta-btn">Explore Stories</NavLink>
             </div>
           </div>
         </section>

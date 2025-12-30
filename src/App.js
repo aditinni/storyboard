@@ -1,36 +1,27 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { CommonLayout } from './Layouts/CommonLayout';
 import { Home } from './Pages/Home';
-import  Mystories  from './Pages/Mystories';
+import Mystories from './Pages/Mystories';
 import { About } from './Pages/About';
 
 function App() {
-  const router = createBrowserRouter([{
-    path:"/storyboard",
-    element: <CommonLayout/>,
-    children:[{
-      path:"/storyboard",
-      element:<Home/>
-    },
+  const router = createHashRouter([
     {
-      path:"my-stories",
-      element:<Mystories/> 
+      path: '/',
+      element: <CommonLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'my-stories', element: <Mystories /> },
+        { path: 'about', element: <About /> },
+      ],
     },
-    {
-      path:"about",
-      element:<About/>
-    }
-  ]
+  ]);
 
-  }])
   return (
-    
     <>
-    <RouterProvider router={router}/>
-  
+      <RouterProvider router={router} />
     </>
-  
   );
 }
 
