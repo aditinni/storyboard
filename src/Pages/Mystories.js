@@ -44,94 +44,56 @@ const Mystories = () => {
 
   return (
     <div className="stories-container">
-      <div className="story-list">
-        {stories.map((story, index) => (
-          <div key={index} className="story-card">
-            <img src={story.thumbnail} alt={story.storyname} className="story-thumbnail" />
-            <div className="story-content">
-              <h2>{story.storyname}</h2>
-              <p>{story.description}</p>
-              <p><strong>Author:</strong> {story.author}</p>
-              <p><strong>Genre:</strong> {story.genre}</p>
-              <button 
-                className="read-btn" 
-                onClick={() => handleOpenPdf(story.pdf)}
-              >
-                Read PDF
-              </button>
+      <div className="stories-wrapper">
+        <div className="stories-header">
+          <h1>My Stories</h1>
+          <p className="stories-subtitle">Explore my collection of captivating narratives</p>
+        </div>
+
+        <div className="story-list">
+          {stories.map((story, index) => (
+            <div key={index} className="story-card">
+              <div className="story-image-wrapper">
+                <img src={story.thumbnail} alt={story.storyname} className="story-thumbnail" />
+              </div>
+              <div className="story-content">
+                <h2>{story.storyname}</h2>
+                <p className="story-description">{story.description}</p>
+                <div className="story-meta">
+                  <span className="meta-item"><strong>Genre:</strong> {story.genre}</span>
+                </div>
+                <button 
+                  className="read-btn" 
+                  onClick={() => handleOpenPdf(story.pdf)}
+                >
+                  Read Story
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* PDF Viewer Section */}
       {selectedPdf && (
-        <div className="pdf-container">
-          <button className="close-btn" onClick={() => setSelectedPdf(null)}>Close</button>
-          <iframe
-            src={selectedPdf}
-            width="100%"
-            height="600px"
-            style={{ border: "none" }}
-            title="PDF Viewer"
-          />
+        <div className="pdf-overlay">
+          <div className="pdf-container">
+            <button className="close-btn" onClick={() => setSelectedPdf(null)}>✕</button>
+            <iframe
+              src={selectedPdf}
+              width="100%"
+              height="100%"
+              style={{ border: "none" }}
+              title="PDF Viewer"
+            />
+          </div>
         </div>
       )}
-    
 
-      {/* Comments Section */}
-     
-      <div className="comments-section">
-      <h1>Drop your comments</h1>
-       
-        <ul>
-          {comments.map((comment, idx) => (
-            <li key={idx}>
-              <p>
-                <strong>{comment.name}</strong> ({comment.time}): {comment.comment}
-                <span 
-                  className="edit-symbol" 
-                  onClick={() => {
-                    const newComment = prompt("Edit your comment:", comment.comment);
-                    if (newComment) {
-                      handleEditComment(idx, newComment);
-                    }
-                  }}
-                >✏️</span>
-                <span 
-                  className="delete-symbol" 
-                  onClick={() => handleDeleteComment(idx)}
-                >🗑️</span>
-              </p>
-            </li>
-          ))}
-        </ul>
-        <div className="comment-form">
-          <input 
-            type="text" 
-            placeholder="Your name" 
-            id="comment-name" 
-          />
-          <textarea 
-            placeholder="Write a comment..." 
-            id="comment-text"
-          />
-          <button 
-            onClick={() => {
-              const name = document.getElementById("comment-name").value;
-              const comment = document.getElementById("comment-text").value;
-              if (name && comment) {
-                handleAddComment(name, comment);
-                document.getElementById("comment-name").value = "";
-                document.getElementById("comment-text").value = "";
-              }
-            }}
-          >
-            Add Comment
-          </button>
-        </div>
+    
+      
       </div>
-    </div>
+  
   );
 };
 

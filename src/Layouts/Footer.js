@@ -3,17 +3,11 @@ import { NavLink } from "react-router-dom"; // Import NavLink for footer navigat
 import "./Footer.css"; // Import the CSS file for styling
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      <div className="footer-links">
-        <ul>
-          <li><NavLink to="/storyboard/about" activeClassName="active">About</NavLink></li>
-         
-        </ul>
-      </div>
-      <div className="footer-info">
-        <p style={{color:"white"}}>&copy; 2025 Aditya Raj-Trying to write, to explore. All rights reserved."</p>
-      </div>
+      <p style={{color:'white'}}>&copy; {currentYear} Aditya Raj. All rights reserved.</p>
     </footer>
   );
 };

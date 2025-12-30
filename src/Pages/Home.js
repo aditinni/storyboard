@@ -6,15 +6,15 @@ export const Home=()=>{
     return(
         <>
         <section className="hero">
-  <div className="hero-content">
-    <h1>Welcome to My Story World</h1>
-    <p>Hi, I'm Aditya Raj, a passionate writer who loves to share stories that captivate, inspire, and entertain. Dive into my creative universe and explore the tales I’ve crafted.</p>
-    <button className="cta-btn"><NavLink to="/storyboard/my-stories" style={{textDecoration:"none",color:"white"}}>Start Reading</NavLink>
-    </button>
-  </div>
-</section>
-
-
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1>Welcome to My Literary World</h1>
+              <p className="hero-subtitle">Discover captivating stories that inspire, challenge, and entertain</p>
+              <p className="hero-description">Explore carefully crafted narratives by Aditya Raj—a storyteller dedicated to creating immersive experiences through the art of writing.</p>
+              <NavLink to="/storyboard/my-stories" className="cta-btn">Explore Stories</NavLink>
+            </div>
+          </div>
+        </section>
         </>
     )
 }
